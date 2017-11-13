@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GuessingGame.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,12 @@ namespace GuessingGame.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(GameModel model)
+        {
+            return View(model);
         }
     }
 }
